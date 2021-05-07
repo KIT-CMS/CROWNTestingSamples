@@ -5,7 +5,7 @@ FILENAME_OUT=$2
 N=$3
 
 # A script to enlarge a ROOT file FILENAME_IN by a factor of N and write to FILENAME_OU
-COMMAND="hadd -O ${FILENAME_OUT} "
+COMMAND="hadd -fk ${FILENAME_OUT} "
 for i in $(seq ${N})
 do
     COMMAND="${COMMAND} ${FILENAME_IN}"
